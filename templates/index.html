@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Мои задачи{% endblock %}
+
+{% block content %}
+    <h1>Мои задачи</h1>
+
+    <form method="post" class="add-form">
+        <input type="text" name="title" placeholder="Новая задача" maxlength="200" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    {% if tasks %}
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="task {% if task.done %}done{% endif %}">
+                    <span>{{ task.title }}</span>
+                    <div class="task-actions">
+                        <form action="{{ url_for('toggle', task_id=task.id) }}" method="post">
+                            <button type="submit">{{ "Вернуть" if task.done else "Выполнено" }}</button>
+                        </form>
+                        <form action="{{ url_for('delete', task_id=task.id) }}" method="post">
+                            <button type="submit" class="danger">Удалить</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="empty">Задач пока нет. Добавьте первую.</p>
+    {% endif %}
+{% endblock %}
