@@ -1,0 +1,16 @@
+# Виртуальное окружение
+venv/
+.venv/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# База данных (Flask-SQLAlchemy кладёт её в instance/)
+instance/
+*.db
+
+# Секреты и настройки редактора
+.env
+.idea/
+.vscode/
