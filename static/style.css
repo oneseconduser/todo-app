@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Шапка */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.username {
+    color: #555;
+}
+
+.inline-form {
+    margin: 0;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #2563eb;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Контент */
+.container {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+/* Flash-сообщения */
+.flash {
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.flash.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.flash.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Формы */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.danger {
+    background: #dc2626;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.add-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+/* Список задач */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.task.done span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions form {
+    margin: 0;
+}
+
+.empty {
+    color: #777;
+}
